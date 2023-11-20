@@ -2,6 +2,9 @@
 
     include("db.php");
 
+    $title = '';
+    $description = '';
+
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
         $query = "SELECT * FROM task WHERE id = $id";
@@ -41,7 +44,7 @@
                     </div>
 
                     <div class="form-group">
-                        <textarea name="description" rows="2" class="form-group" placeholder="Update Description"><?php echo $description; ?></textarea>
+                        <textarea name="description" cols="30" rows="10" class="form-group" placeholder="Update Description"><?php echo $description; ?></textarea>
                     </div>
 
                     <button class="btn btn-success" name="update">
